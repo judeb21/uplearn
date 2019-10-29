@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'CircularStd';
+    src: url('fonts/CircularStd/CircularStd-Bold.eot');
+    src: url('fonts/CircularStd/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CircularStd/CircularStd-Bold.woff2') format('woff2'),
+         url('fonts/CircularStd/CircularStd-Bold.woff') format('woff'),
+         url('fonts/CircularStd/CircularStd-Bold.ttf')  format('truetype'),
+         url('fonts/CircularStd/CircularStd-Bold.svg#CircularStd') format('svg');
+
+font-family: 'CircularStd';
+    src: url('fonts/CircularStd/CircularStd-Medium.eot');
+    src: url('fonts/CircularStd/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CircularStd/CircularStd-Medium.woff2') format('woff2'),
+         url('fonts/CircularStd/CircularStd-Medium.woff') format('woff'),
+         url('fonts/CircularStd/CircularStd-Medium.ttf')  format('truetype'),
+         url('fonts/CircularStd/CircularStd-Medium.svg#CircularStd') format('svg');
+
+font-family: 'CircularStd';
+    src: url('fonts/CircularStd/CircularStd-Black.eot');
+    src: url('fonts/CircularStd/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CircularStd/CircularStd-Black.woff2') format('woff2'),
+         url('fonts/CircularStd/CircularStd-Black.woff') format('woff'),
+         url('fonts/CircularStd/CircularStd-Black.ttf')  format('truetype'),
+         url('fonts/CircularStd/CircularStd-Black.svg#CircularStd') format('svg');
+}

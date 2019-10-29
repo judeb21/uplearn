@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'CircularStd Black';
+    src: 
+        url('../fonts/CircularStd/CircularStd-Black.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'CircularStd Bold';
+    src: 
+        url('../fonts/CircularStd/CircularStd-Black.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'CircularStd Medium';
+    src: 
+        url('../fonts/CircularStd/CircularStd-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: 
+        url('../fonts/ProximaNova/Mark-Simonson--Proxima-Nova-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: 
+        url('../fonts/ProximaNova/Mark-Simonson--Proxima-Nova-Semibold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: 
+        url('../fonts/ProximaNova/Mark-Simonson--Proxima-Nova-Regular.woff2') format('woff2');
+}
