@@ -89,7 +89,7 @@ nav{
   top: 92%;
   left: 45%;
   width: 20%;
-  height: 5px;
+  height: 3px;
   opacity: 0;
   background: #8E857F;
   margin: 0 auto;
@@ -263,6 +263,13 @@ nav{
 .skill {
   position: absolute;
   display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .skill {
+    width: 100%;
+    flex-flow: column wrap;
+  }
 }
 
 .category {
@@ -882,6 +889,7 @@ nav{
 
 .text-white {
   color: #fff;
+  font-weight: lighter;
 }
 
 .text-center {
@@ -1065,6 +1073,10 @@ nav{
 
   .subtitle {
     letter-spacing: 0;
+  }
+
+  .uplearn-about {
+    background-attachment: scroll;
   }
   
 }
@@ -1432,6 +1444,28 @@ Resources page-----
   margin-right: 3%;
 }
 
+@media only screen and (max-width: 600px) {
+  .resource__list {
+    width: 100%;
+  }
+
+  .resources__list span img {
+    width: 15%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .resource__list {
+    width: 100%;
+  }
+
+  .resources__list span img {
+    width: 15%;
+    margin-top: 5%;
+  }
+}
+
 .other-resources {
   padding: 5% 0;
 }
@@ -1556,6 +1590,11 @@ Resources page-----
   font-family: 'CircularStd Bold';
 }
 
+.type span {
+  font-family: 'CircularStd Medium';
+  font-weight: lighter;
+}
+
 .cat {
   display: flex;
   flex-grow: 1;
@@ -1564,8 +1603,16 @@ Resources page-----
 }
 
 .cat span {
-  font-family: 'CircularStd Bold';
+  font-family: 'CircularStd Medium';
   color: #8E857F;
+  display: flex;
+  font-weight: lighter;
+}
+
+.cat span img {
+  align-self: center;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 /*.filter-arrow {
@@ -2004,9 +2051,9 @@ footer {
 .footer__copy-right {
   display: flex;
   justify-content: center;
-  color: #000;
+  color: #207833;
   font-size: 1.5rem;
-  font-family: 'Proxima Nova Regular';
+  font-family: 'Proxima Nova Bold';
   padding: 2% 0;
 }
 

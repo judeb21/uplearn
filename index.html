@@ -78,19 +78,19 @@
 					<h1>My Child Has<br class="hidden"> Issues With</h1>
 				</div>
 				<div class="general-category general little2">
-					<a class="category" href="resource.html">
-						<p>Helping others</p>
+					<a class="category" href="single.html">
+						<p>Planning Ahead</p>
 					</a>
-					<a class="category soci" href="resource.html">
+					<a class="category soci" href="single.html">
 						<p style="text-align: center; padding: 0 1rem;">Taking responsibility when wrong or right</p>
 					</a>
-					<a class="category" href="resource.html">
+					<a class="category" href="single.html">
 						<p>Telling the truth</p>
 					</a>
-					<a class="category" href="resource.html">
-						<p>Coping with stress</p>
+					<a class="category" href="single.html">
+						<p>Understanding goals</p>
 					</a>
-					<a class="category" href="resource.html">
+					<a class="category" href="single.html">
 						<p>Resisting peer pressure</p>
 					</a>
 				</div>
@@ -227,11 +227,11 @@
 	<main>
 		<section class="uplearn">
 			<div class="container uplearn-container">
-				<div class="text">
+				<div class="text" id="stick">
 					<h2 class="title">
 						Improve Your Child's <br class="hidden"> Learning Experience
 					</h2>
-					<p class="subtitle" id="stick">
+					<p class="subtitle">
 						Uplearn Uses Real Data To Provide An <br class="hidden">
 						Wholesome & Personalized Learning <br class="hidden">
 						Experiences For Your Child.
@@ -366,18 +366,42 @@
 			var tl = new TimelineMax({onUpdate:updatePercentage});
 			const controller = new ScrollMagic.Controller();
 
-			tl.from(".uplearn-gallery", .5, {x:10, opacity:0});
-			tl.from(".item1", 1, {x:-200, opacity:0}, "=-.5");
-			tl.from(".item2", 1, {x:200, opacity:0}, "=-.7");
-			tl.from(".item3", 1, {x:-200, opacity:0}, "=-1");
-			tl.from(".item4", 1, {x:200, opacity:0}, "=.8");
+			tl.fromTo(".item2", 0.6, {
+				x: 100, 
+				opacity: 0
+			}, {
+				opacity: 1,
+				x: 0,
+				ease: Power2.easeOut
+			}, "-=.3").fromTo(".item1", 0.6, {
+				x: -100, 
+				opacity: 0
+			}, {
+				opacity: 1,
+				x: 0,
+				ease: Power2.easeOut
+			}, "=-.3").fromTo(".item4", 0.6, {
+				x: 100, 
+				opacity: 0
+			}, {
+				opacity: 1,
+				x: 0,
+				ease: Power2.easeOut
+			}, "=-.3").fromTo(".item3", 2, {
+				x: -100, 
+				opacity: 0
+			}, {
+				opacity: 1,
+				x: 0,
+				ease: Power2.easeOut
+			}, "=-2");
 
 			const scene = new ScrollMagic.Scene({
-				triggerElement: "#stick",
+				triggerElement: ".text",
 				triggerHook: "onLeave",
 				duration: "100%"
 			})
-			.setPin("#stick")
+			.setPin(".uplearn-gallery")
 			.setTween(tl)
 			.addTo(controller);
 
