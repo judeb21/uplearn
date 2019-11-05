@@ -54,10 +54,18 @@ a {
 }
 
 nav{
-  height: 6rem;
-  margin: 2rem 0;
+  height: 8rem;
+  margin: 0;
   background: white;
-  /*position: fixed;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 999;
+}
+
+nav .hide {
+  transform: translateY(-100%);
 }
 
 .navbar {
@@ -66,6 +74,7 @@ nav{
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1.5%;
 }
 
 .navbar .menu {
@@ -139,7 +148,7 @@ nav{
   position: absolute;
   height: 9px;
   width: 100%;
-  background: #000;
+  background: #207833;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -176,7 +185,7 @@ nav{
 }
 
 .data {
-  padding: 15em 0 0 2em;
+  padding: 23em 0 0 2em;
   text-align: left;
 }
 
@@ -770,6 +779,7 @@ nav{
 
   .header {
     flex-flow: column wrap;
+    margin-top: 25%;
   }
 
   .header-description {
@@ -790,7 +800,7 @@ nav{
 
   .header-description h1 {
     font-size: 4rem;
-    margin: 3% 2%;
+    margin: 3% 5%;
   }
 
   .navbar .menu {
@@ -807,6 +817,7 @@ nav{
 
   .uplearnLogo {
     height: 5rem;
+    margin-top: 10%;
   }
   
 }
@@ -1097,11 +1108,15 @@ nav{
   .hidden { display: none;}
 
   .uplearn {
-    margin: 25% 0 !important;
+    margin: 70% 0 !important;
   }
 }
 
 @media only screen and (max-width: 320px) {
+  .uplearn {
+    margin: 60% 0 !important;
+  }
+
   .item1 img, .item2 img,
   .item3 img, .item4 img {
     height: 100%;
@@ -1352,7 +1367,7 @@ Resources page-----
 ------------------*/
 .resources {
   background-color: #F5F5F5;
-  padding: 5% 0;
+  padding: 10% 0;
 }
 
 .uplearn-resources {
@@ -1645,7 +1660,7 @@ About Page----------
 
 .aboutImage {
   height: 100%;
-  margin-top: -5%;
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1932,6 +1947,10 @@ About Page----------
 }
 
 @media only screen and (min-width: 1200px) {
+  .header {
+    padding: 5% 5%;
+  }
+
   .l-m {
     margin-right: 3%;
   }
@@ -1971,6 +1990,168 @@ About Page----------
     flex: 1;
     margin-top: 5%;
   }
+}
+
+/*-------------------
+How it works section
+---------------------*/
+.how-it-works {
+  max-height: 100vh;
+  width: 100%;
+}
+
+.works img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display:block;
+  object-fit: cover;
+  object-position: top;
+}
+
+.works {
+  position:relative;
+  display: flex;
+  max-height: 100vh;
+}
+
+.works:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index:99;
+}
+
+.term {
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25vw;
+}
+
+.term-work {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.term-work h4{
+  font-size: 3rem;
+  color: #c7c7c7;
+  padding: 1rem 2rem;
+  font-family: 'CircularStd Medium';
+}
+
+.term-work .active {
+  color: #fff;
+}
+
+.grading {
+  max-width: 114rem;
+  width: 100%;
+  margin: 4% auto;
+}
+
+.grade {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: 'CircularStd Medium';
+  color: #0D0D0D;
+}
+
+.grading-system {
+  display: flex;
+}
+
+.grading-system__category {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 0 60%;
+  padding-top: 2%;
+}
+
+.grading-category {
+  width: 32rem;
+  height: 16rem;
+  margin: 1rem;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cat-des {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  align-self: flex-start;
+  margin-top: 15%;
+  padding: 0 2rem;
+}
+
+.cat-des h4 {
+  font-size: 1.5rem;
+  font-family: 'CircularStd Medium';
+  color: #3A3A92;
+}
+
+.cat-des h3 {
+  font-size: 2rem;
+  font-family: 'CircularStd Medium';
+  margin-top: 15%;
+}
+
+.cat-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.cat-image img {
+  object-fit: contain;
+  object-position: top;
+  height: 14rem;
+  width: 100%;
+}
+
+.grading-system__description {
+  display: flex;
+  flex-flow: column;
+  flex: 0 0 40%;
+  padding-top: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 6rem;
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid #3A3A92;
+  color: #0D0D0D;
+  text-align: center;
+  font: 3rem 'CircularStd Medium', sans-serif;
+}
+
+.grading-system__description span {
+  padding: 1.5rem;
+  font: 2rem 'Proxima Nova Bold';
+  color: #5C5C5C;
+}
+
+.grading-des {
+  font: 3rem 'CircularStd Medium', sans-serif;
+  color: #3A3A92;
 }
 
 /*-----------------
