@@ -52,11 +52,43 @@
 		<section class="how-it-works">
             <div class="works">
 				<img src="asset/img/Uplearn-Card.png" alt="Uplearn how it works card with parent">
-				<div class="term">
+				<div class="term">					
 					<div class="term-work">
-						<h4 class="active">Beginning of Term</h4>
-						<h4>Mid Term</h4>
-						<h4>End of Term</h4>
+						<h4 class="active" id="beginning">Beginning of Term</h4>
+						<h4 class="active" id="mid-term">Mid Term</h4>
+						<h4 class="active" id="end-term">End of Term</h4>
+					</div>
+				</div>
+				<div class="term-des">
+					<div class="term-des1">
+						<h4>Pupils are given cards</h4>
+						<p>Within the period of 1 - 3 weeks after resumption, 
+							the uplearn report cards will be distributed by the teachers to 
+							their respective pupils to be filled by the pupils and their parents.
+						</p>
+					</div>
+					<div class="term-des2">
+						<div class="term-des2__item1">
+							<h4>Pupils are given cards</h4>
+							<p>Within the period of 1 - 3 weeks after resumption, 
+								the uplearn report cards will be distributed by the teachers to 
+								their respective pupils to be filled by the pupils and their parents.
+							</p>
+						</div>
+						<div class="term-des2__item2">
+							<h4>Pupils are given cards</h4>
+							<p>Within the period of 1 - 3 weeks after resumption, 
+							   the uplearn report cards will be distributed by the teachers to 
+							   their respective pupils to be filled by the pupils and their parents.
+							</p>
+						</div>
+					</div>
+					<div class="term-des3">
+						<h4>Pupils are given cards</h4>
+						<p>Within the period of 1 - 3 weeks after resumption, 
+							the uplearn report cards will be distributed by the teachers to 
+							their respective pupils to be filled by the pupils and their parents.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -68,7 +100,7 @@
 			</div>
 			<div class="grading-system">
 				<div class="grading-system__category">
-					<div class="grading-category">
+					<div class="grading-category" id="great">
 						<div class="cat-des">
 							<h4>Things I'm Great At</h4>
 							<h3>4 - 5</h3>
@@ -77,7 +109,7 @@
 							<img src="asset/img/icon/GreatAt.png" alt="Things I am great at">
 						</div>
 					</div>
-					<div class="grading-category">
+					<div class="grading-category" id="better">
 						<div class="cat-des">
 							<h4>Things I Can Be Better At</h4>
 							<h3>3</h3>
@@ -86,7 +118,7 @@
 							<img src="asset/img/icon/BetterAt.png" alt="Things I Can Be Better At">
 						</div>
 					</div>
-					<div class="grading-category">
+					<div class="grading-category" id="good">
 						<div class="cat-des">
 							<h4>Things I Can Do</h4>
 							<h3>2</h3>
@@ -95,7 +127,7 @@
 							<img src="asset/img/icon/CanDo.png" alt="Things I can do">
 						</div>
 					</div>
-					<div class="grading-category">
+					<div class="grading-category" id="poor">
 						<div class="cat-des">
 							<h4>Things I Must Avoid</h4>
 							<h3>1 </h3>
@@ -107,12 +139,11 @@
 				</div>
 				<div class="grading-system__description">
 					<div class="box">
-						<!-- <h4>1</h4> -->
-						1
+						<h4 id="num">1</h4>
 					</div>
 					<span>Means</span>
 					<div class="grading-des">
-						<h4>Not OK</h4>
+						<h4 id="grade">Not OK</h4>
 					</div>
 				</div>
 			</div>
@@ -149,5 +180,276 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
 	<script src="asset/js/script.js"></script>
+
+	<script>
+		
+		jQuery(document).ready(function() {
+			$("#great").click(function() {
+				$("#grade").fadeOut(500, function() {
+					$("#grade").text("Excellent");
+				});
+				$("#num").fadeOut(500, function() {
+					$("#num").text("4-5");
+				});
+				$("#num").fadeIn(300);
+				$("#grade").fadeIn(500);
+			});
+
+			$("#better").click(function() {
+				$("#grade").fadeOut(500, function() {
+					$("#grade").text("Good");
+				});
+				$("#num").fadeOut(500, function() {
+					$("#num").text("3");
+				});
+				$("#num").fadeIn(300);
+				$("#grade").fadeIn(500);
+			});
+
+			$("#good").click(function() {
+				$("#grade").fadeOut(500, function() {
+					$("#grade").text("Okay");
+				});
+				$("#num").fadeOut(500, function() {
+					$("#num").text("2");
+				});
+				$("#num").fadeIn(300);
+				$("#grade").fadeIn(500);
+			});
+
+			$("#poor").click(function() {
+				$("#grade").fadeOut(500, function() {
+					$("#grade").text("Not Ok");
+				});
+				$("#num").fadeOut(500, function() {
+					$("#num").text("1");
+				});
+				$("#num").fadeIn(300);
+				$("#grade").fadeIn(500);
+			});
+
+		});
+	</script>
+	
+	<script>
+		
+		//Scroll animation
+		const works = document.querySelector(".works");
+		const beginning = document.querySelector("#beginning");
+		const mid = document.querySelector("#mid-term");
+		const end = document.querySelector("#end-term");
+		const term1 = document.querySelector(".term-des1");
+		const termHeader = term1.querySelector("h4");
+		const termP = term1.querySelector("p");
+
+		const item1 = document.querySelector(".term-des2__item1");
+		const item1Header = item1.querySelector("h4");
+		const item1P = item1.querySelector("p");
+
+		const item2 = document.querySelector(".term-des2__item2"); 
+		const item2Header = item1.querySelector("h4");
+		const item2P = item1.querySelector("p");
+
+		const term3 = document.querySelector(".term-des3");
+		const term3Header = term3.querySelector("h4");
+		const term3P = term3.querySelector("p");
+
+		const controller = new ScrollMagic.Controller();
+
+		let scene = new ScrollMagic.Scene ({
+			duration: "4000",
+			triggerElement: ".how-it-works",
+			triggerHook: 0
+		})
+		.setPin(".how-it-works")
+		.addTo(controller);
+
+		const tl = new TimelineMax();
+
+		//BEGINNING OF TERM
+		tl.fromTo("#beginning", 1, {
+			opacity: 1
+		}, {
+			delay: 500,
+			opacity: 0,
+			x: 200,		
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des1 h4", 1, {
+			opacity: 1
+		}, {
+			opacity: 0,
+			y: -200,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des1 p", 1, {
+			opacity: 1
+		}, {
+			opacity: 0,
+			y: -200,
+			ease: Power2.easeOut
+		}, "=-.5");
+
+		let scene2 = new ScrollMagic.Scene ({
+			duration: "1500",
+			triggerElement: ".how-it-works",
+			triggerHook: 0
+		})
+		.setTween(tl)
+		.addTo(controller);
+
+
+		//MID TERM
+		const tm = new TimelineMax();
+
+		tm.fromTo(mid, 3, {
+			opacity: 0,
+			x: 400
+		}, {
+			delay: 5,
+			opacity: 1,
+			x: 0,			
+			ease: Power2.easeOut
+		}, "=-.3").fromTo(term1, 3, {
+			opacity: 1
+		}, {
+			opacity: 0,
+			x: 200,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo( ".term-des2__item1", 1, {
+			opacity: 0
+		}, {
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "=-.1").fromTo(".term-des2__item1 h4", 1, {
+			opacity: 0,
+			x: 200
+		}, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des2__item1 p", 1, {
+			opacity: 0,
+			x: 200
+		}, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=-1").fromTo(".term-des2__item2", 2, {
+			opacity: 0
+		}, {
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "=-.1").fromTo(".term-des2__item2 h4", 2, {
+			opacity: 0,
+			x: 200,
+		}, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des2__item2 p", 2, {
+			opacity: 0,
+			x: 200
+		}, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=-.5");
+
+		let scene3 = new ScrollMagic.Scene ({
+			duration: "3000",
+			triggerElement: ".how-it-works",
+			triggerHook: 0.5
+		})
+		.setTween(tm)
+		.addTo(controller);
+
+		//END OF TERM
+		const te = new TimelineMax();
+
+		te.fromTo(end, 3, {
+			opacity: 0,
+			x: 200
+		}, {
+			delay: 300,
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=.1").fromTo(mid, 9, {
+			opacity: 1
+		}, {
+			opacity: 0,
+			x: 200,
+			ease: Power2.easeOut
+		}, "=.1").fromTo( ".term-des2__item1", 1, {
+			opacity: 1,
+			ease: Power2.easeOut
+		}, {
+			opacity: 0
+		}, "=-.1").fromTo(".term-des2__item1 h4", 1, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, {
+			opacity: 0,
+			x: 200,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des2__item1 p", 1, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, {
+			opacity: 0,
+			x: 200,
+			ease: Power2.easeOut
+		}, "=-1").fromTo(".term-des2__item2", 2, {
+			opacity: 1,
+			ease: Power2.easeOut
+		}, {
+			opacity: 0,
+			ease: Power2.easeOut
+		}, "=-.1").fromTo(".term-des2__item2 h4", 2, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, {
+			opacity: 0,
+			x: 200,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des2__item2 p", 2, {
+			opacity: 1,
+			x: 0,
+			ease: Power2.easeOut
+		}, {
+			opacity: 0,
+			x: 200,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des3 h4", 1, {
+			opacity: 0,
+			y: -200
+		}, {
+			opacity: 1,
+			y: 0,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=-.5").fromTo(".term-des3 p", 1, {
+			opacity: 0,
+			y: -200
+		}, {
+			opacity: 1,
+			y: 0,
+			x: 0,
+			ease: Power2.easeOut
+		}, "=-.5");
+
+		let scene4 = new ScrollMagic.Scene ({
+			duration: "4000",
+			triggerElement: ".how-it-works",
+			triggerHook: 1
+		})
+		.setTween(te)
+		.addTo(controller);
+
+
+	</script>
+	
 </body>
 </html>
